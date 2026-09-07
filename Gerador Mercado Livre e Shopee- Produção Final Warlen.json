@@ -1,0 +1,844 @@
+{
+  "name": "Gerador Mercado Livre - Produção Final Warlen",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "gerar-link",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -1888,
+        -112
+      ],
+      "id": "55812b23-2949-4bb9-8006-7bfc4add9ffa",
+      "name": "Webhook",
+      "webhookId": "6d926f1c-59b6-4857-9f45-1cf638b3fc6e"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "url-field",
+              "name": "url",
+              "value": "={{ $json.body.url_concorrente }}",
+              "type": "string"
+            },
+            {
+              "id": "cookie-field",
+              "name": "cookie",
+              "value": "_d2id=1b61d816-7447-4eba-a865-78f93e70683b; cp=36260000; inferredZipcode=true; orguseridp=1278924097; ftid=e6DMBwbwfS2AXWCP9lBCZglPDNQeQMc0-1779234780191; cookiesPreferencesLoggedFallback=%7B%22userId%22%3A1278924097%2C%22categories%22%3A%7B%22advertising%22%3Atrue%2C%22functionality%22%3Atrue%2C%22performance%22%3Atrue%2C%22traceability%22%3Atrue%7D%7D; cookiesPreferencesNotLogged=%7B%22categories%22%3A%7B%22advertising%22%3Atrue%2C%22functionality%22%3Atrue%2C%22performance%22%3Atrue%2C%22traceability%22%3Atrue%7D%7D; _hjSessionUser_720738=eyJpZCI6ImYxY2Y0ZDQ4LTE5NDQtNWRjMC05NDkzLWQ0ZTcyZDIwNjE0MCIsImNyZWF0ZWQiOjE3NzkzMjYzNzgzMjksImV4aXN0aW5nIjpmYWxzZX0=; _gcl_au=1.1.185296829.1779235168.471252304.1779646443.1779649001; _derived_epik=dj0yJnU9RF9ocWZKclowclIxT3BobG9GTG1PQkRMRVRhavdnR3gmbj1lZFNTUDA5eEV2TjU0a1J1T25ROWFnJm09NCZ0PUFBQUFBR29maXc0JnJtPTQmcnQ9QUFBQUFHb2ZpdzQmc3A9Mg; _pin_unauth=dWlkPU9UUm1Oamt4TWpJdE5qTmlaQzAwWmpGa0xUbGtaakl0WkRFeE1XVXdOVEUxTnpRMg; _fbp=fb.2.1779235169272.701143258484330529; cto_bundle=2FROyl80dzFnMnUzNFptdjNVeTdFOUpJRzViMlUwTXFRYkZpRUFZcndoTnltTUxwaXpiS1ZRNzBPeUpkUDlXbFJiRUNTSUVMZmM4WG01RXEwdCUyQmlocFZYYVRtR1BjaUprRUptemZVQ29HSHZlQ1RxTUNqUm5sazBGMGpSbGFkMTlLSlJlNGdKbGtFVFFKcjlnblZUUEhHZGtLSktwcHdEZ3FQRDU1VUhCTFZUelhXU3MxVDRlcFp4Vzk1TnVCZ3NmTWp1RQ; _tt_enable_cookie=1; _ttp=01KS1AWCGPE27DE2A7RX35KXK3_.tt.2; ttcsid_C9SJ5SBC77UADFMAH8T0=1780454671270::kpnZLkYijNX6hKe85fVq.13.1780456784802.1; ttcsid=1780455246945::vC9LSEFdCIzrtA9IRptp.13.1780456784802.0::1.1534683.1537857::1522732.4.43.74::1521304.8.0; ttcsid_CFVSC2JC77U0ARCJTCJ0=1780454671273::0TFZXcGTMeECPAXA_pbx.12.1780456769684.1; _cq_duid=1.1779235173.s4XjqvGxoVE3duYb; _cq_session=12.1780454669904.311cXkbDf43wgfkT.1780456155552; LAST_SEARCH=MLB22145396; _twpid=tw.1779241458802.781156722894768312; c_Z1DqXTD=1; _pin_unauth=dWlkPU9UUm1Oamt4TWpJdE5qTmlaQzAwWmpGa0xUbGtaakl0WkRFeE1XVXdOVEUxTnpRMg; __rtbh.uid=%7B%22eventType%22%3A%22uid%22%2C%22id%22%3A%221278924097%22%2C%22expiryDate%22%3A%222027-06-03T03%3A09%3A16.602Z%22%7D; __rtbh.lid=%7B%22eventType%22%3A%22lid%22%2C%22id%22%3A%22lXvhBDEyArJZ7QgNe2lM%22%2C%22expiryDate%22%3A%22lXvhBDEyArJZ7QgNe2lM%22%2C%22expiryDate%22%3A%222027-06-03T03%3A09%3A16.602Z%22%7D; QSI_SI_5j6Ek3IHl7l6UTA_intercept=true; _ga=GA1.3.752643284.1779326358; _hjSessionUser_580848=eyJpZCI6ImYxY2Y0ZDQ4LTE5NDQtNWRjMC05NDkzLWQ0ZTcyZDIwNjE0MCIsImNyZWF0ZWQiOjE3NzkzMjYzNzgzMjksImV4aXN0aW5nIjpmYWxzZX0=; orguserid=H0ZHh074ZTd4h; orgnickp=ADRIANOWARLEN20230427211703; ssid=ghy-052021-C0FmfvYYQCqKmNKjHmgPqj4JMs5PPY-__-1278924097-__-1874020822617--RRR_0-RRR_0; nsa_rotok=eyJhbGciOiJSUzI1NiIsImtpZCI6IjMiLCJ0eXAiOiJKV1QifQ.eyJpZGVudGlmaWVyIjoiYjQ1N2UwODktNDMzNS00ZjNjLWE2MDItNjRjOGUyNjM2ZjI0Iiwicm90YXRpb25faWQiOiJjNDJiYmU2Zi0wNmJiLTRmNjEtOTkzZi0xNDM0MDQ5YTIzNTgiLCJwbGF0Zm9ybSI6Ik1MIiwicm90YXRpb25fZGF0ZSI6MTc4MDQ1NzM2OSwiZXhwIjoxNzgzMDQ4NzY5LCJqdGkiOiI4MWUwZDYwNy0yOGM3LTRjZjctYmVkMi1mNjY5MzRlNTY4MzciLCJpYXQiOjE3ODA0NTY3NjksInN1YiI6ImI0NTdlMDg5LTQzMzUtNGYzYy1hNjAyLZO0YzhlMjYzNmYyNCJ9.fVv_zoYtuf-sojWuF2Q2bYProLjPObxJYwCwGX0IRlRonvmVWxUID0ouhudWM5QqIR52CgiOWXB4hToHf5T1mU-nQDkh4UD_pz_WZmRg_KEGMeOKd2NsOJUiw6OzEfYChMvH9b3C7aCm44jmy30OOdXnVNmuTgQnbMcWTDGhwvGlW0X73XP87Fxahc7i4oH2VmdJ1Y7an58YSLQMs5vTJAXMeUApFskVTTiakz_GN5Y2vw4pv3n53iwLn4Dy3zb6wLZoO-0tpIJTlU86ZLQIKhurgxkieM9iH9-t-8p39Z4x2kWraFehaG499p1lM2R3-ThEVuNao1DfilmQ2OID5A; c_2l78kU=1; _derived_epik=dj0yJnU9S3VNNWhpOG81Vnh6UHEtblJaNy13RC1VSDFMUUIteG4mbj1NclRYMFlkS2t3cmR2UFZIYkF5a3BBJm09NCZ0PUFBQUFBR29mbXRzJnJtPTQmcnQ9QUFBQUFHb2ZtdHMmc3A9Mg; c_Z1l9PLD=1; c_Z1VQLC5=1; c_2F6lE61m2Uu584u-mWeAyA=vip-core.mobile%2F2.13.0-rc-2; QSI_SI_6KFNYxevm2HuQOa_intercept=true; ml_cart-quantity=2; _cq_suid=1.1779235173.xPkEFE0NakE4p9tz; main_domain=; main_attributes=; categories=; last_query=mlb22145396; category=; backend_dejavu_info=j%3A%7B%7D; _csrf=EaX1z9cfX6GxvlBma9gE2XH7; x-meli-session-id=armor.5578d980bb80925c9a4939835c227920957dea3219690f80c0c58ee2de27cd2e2596d57634405cfc17f60d8369471a753b1a678f2585688795c9227d96d4b35dfd28c45ae6a1ae3169d41f3ffd812bd7720518047f13eaae91022ffc983b19de.12f4518848f2bf34a9d6dbf0dd86cb48; _ml_ar-browser-check=cc0ed87f-65b7-464a-bc8c-6c979774ada9; _mldataSessionId=29bd75fd-07b0-46fa-bef6-6f35c2e9d95f; _snoopy=eyJmaW5nZXJwcmludCI6IlNyb2NqWDNZY0FSQnlVUzVlWmxYU2F4TWpiT0FTb04yN3VMV040Q2pXNUx0Ui9oaXBQTkJ3cVVzd2ZGQlVJLzBqSzNpUmdKcEhNS2hWVzJ4WFJoSkZYMHV4aDZ4d1gycTZ4dkxtN2s4UTRXQkJvWE9LeUxDcThoemF2R292SGhRQ0ZUQ21ObTAwV24vd1IybDFYayt0amF4d1RwS09GLy9HSEU2b3pPQTc2Z1U0TE9aTnZZPSIsImtleSI6IlZOQ2llU1BnbjZKcC9GdHBFVm9Oby95eEZVZ0ZsNjFCb1lUVWE5OFk3LytoaDhsb29MQkFEa2lHc01NV09KNEdvQllhSGlzWlNteTFINkozRUw4OEtLaGF2bEZBdEN2SiJ9; cookiesPreferencesLogged=%7B%22userId%22%3A1278924097%2C%22categories%22%3A%7B%22advertising%22%3Atrue%2C%22functionality%22%3Atrue%2C%22performance%22%3Atrue%2C%22traceability%22%3Atrue%7D%7D; _hjSession_720738=eyJpZCI6ImZmOWU5MGUwLTU0ODItNDFlMi1iODZlLWFmZDJiMTU2OGI4NCIsImMiOjE3ODA0NTYxMzEzMzcsInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjowLCJzcCI6MH0=; _uetsid=1f06aba05deb11f1b708cb3d60aa47ae; _uetvid=c5edffd053de11f1b393d71232231098; hide-cookie-banner=1278924097-COOKIE_PREFERENCES_ALREADY_SET; device_force_view=mobile",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1296,
+        -720
+      ],
+      "id": "4cec083a-30cb-4d2f-be57-05283299ee29",
+      "name": "2. CAMPO DO LINK"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('2. CAMPO DO LINK').item.json.url }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "cookie",
+              "value": "={{ $('2. CAMPO DO LINK').item.json.cookie }}"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          },
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "645cdc6b-962e-4897-ad82-d4a8d83f0fce",
+      "name": "3. Expandir e Seguir Rota",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -1088,
+        -720
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const dadosOriginais = $('2. CAMPO DO LINK').first().json;\nconst respostaRede = items[0].json;\nlet mlbNumero = \"\";\n\n// Garante a captura do texto bruto de onde quer que ele venha (body ou data)\nlet textoBruto = \"\";\nif (respostaRede) {\n    if (typeof respostaRede === 'string') {\n        textoBruto = respostaRede;\n    } else if (respostaRede.body) {\n        textoBruto = typeof respostaRede.body === 'string' ? respostaRede.body : JSON.stringify(respostaRede.body);\n    } else if (respostaRede.data) {\n        textoBruto = typeof respostaRede.data === 'string' ? respostaRede.data : JSON.stringify(respostaRede.data);\n    }\n}\n\nif (textoBruto) {\n    // 🎯 O ALGORITMO EXATO DE DIVISÃO TEXTUAL DO WARLEN:\n    // Divide o textão usando a palavra 'item_id' como separador estratégico\n    const blocos = textoBruto.split('item_id');\n    \n    // O primeiro bloco (índice 0) é tudo o que veio antes do primeiro 'item_id'. Ignoramos.\n    // Começamos a ler a partir do índice 1, que é o que vem logo após cada escrita 'item_id'\n    for (let i = 1; i < blocos.length; i++) {\n        let trechoAtual = blocos[i];\n        \n        // Verifica se a palavra MLB existe dentro deste trecho específico\n        let posMlb = trechoAtual.indexOf('MLB');\n        \n        if (posMlb !== -1) {\n            // Encontrou o MLB que veio após este item_id! \n            // Agora vamos caminhar para a frente capturando apenas os dígitos numéricos colados nele\n            let idxNum = posMlb + 3;\n            let acumuladorStr = \"\";\n            \n            while (idxNum < trechoAtual.length) {\n                let char = trechoAtual.charAt(idxNum);\n                if (char >= '0' && char <= '9') {\n                    acumuladorStr += char;\n                } else {\n                    // Encontrou aspas (\"), dois pontos (:), barra ou qualquer símbolo? PARA NA HORA!\n                    break;\n                }\n                idxNum++;\n            }\n            \n            // Valida se coletou um número de produto legítimo (Meli costuma ter entre 8 e 11 dígitos)\n            if (acumuladorStr.length >= 7) {\n                mlbNumero = acumuladorStr;\n                break; // Encontrou o produto fiel do anúncio, encerra a varredura na mesma hora!\n            }\n        }\n    }\n}\n\n// Sem mascarar! Se não encontrar nada, avisa na string para sabermos no Flutter\nif (!mlbNumero || mlbNumero === \"\") {\n    mlbNumero = \"ERRO_VARREDURA_LINEAR\";\n}\n\nconst urlMontada = 'https://produto.mercadolivre.com.br/MLB-' + mlbNumero;\nreturn [{ json: { url_correta: urlMontada, cookie: dadosOriginais.cookie } }];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -880,
+        -720
+      ],
+      "id": "c4655e22-cf34-4e79-af8b-39bb9e3a3fbe",
+      "name": "4. Extrair e Montar URL"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "url-sobrescrita",
+              "name": "url",
+              "value": "={{ $json.url_correta }}",
+              "type": "string"
+            },
+            {
+              "id": "cookie-repassado",
+              "name": "cookie",
+              "value": "={{ $json.cookie }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -672,
+        -720
+      ],
+      "id": "4ecaf61d-8e6c-4357-a7fb-59028793772b",
+      "name": "5. NOVO CAMPO DO LINK"
+    },
+    {
+      "parameters": {
+        "url": "https://www.mercadolivre.com.br/afiliados/linkbuilder",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "cookie",
+              "value": "={{ $json.cookie }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "id": "92a461c9-d8ef-4b3a-954d-3bc074b041af",
+      "name": "6. Validando Sessão",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -480,
+        -720
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const oldCookieString = $('5. NOVO CAMPO DO LINK').first().json.cookie || \"\";\nconst setCookieArray = $(\"6. Validando Sessão\").first().json.headers['set-cookie'] || [];\n\nlet cookieMap = {};\n\nif (oldCookieString) {\n    oldCookieString.split(';').forEach(c => {\n        const [key, ...val] = c.trim().split('=');\n        if (key) cookieMap[key] = val.join('=');\n    });\n}\n\nif (Array.isArray(setCookieArray)) {\n    setCookieArray.forEach(c => {\n        const cookiePart = c.split(';')[0];\n        const [key, ...val] = cookiePart.trim().split('=');\n        if (key) cookieMap[key] = val.join('=');\n    });\n}\n\nconst newCookieString = Object.keys(cookieMap)\n    .map(key => `${key}=${cookieMap[key]}`)\n    .join('; ');\n\nreturn [{ json: { cookies_atualizados: newCookieString, url_final: $('5. NOVO CAMPO DO LINK').first().json.url } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -288,
+        -720
+      ],
+      "id": "dc6997f9-ee0a-4726-be9c-52e9f3bc5521",
+      "name": "7. Renovando Chaves"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.mercadolivre.com.br/affiliate-program/api/v2/affiliates/createLink",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json, text/plain, */*"
+            },
+            {
+              "name": "origin",
+              "value": "https://www.mercadolivre.com.br"
+            },
+            {
+              "name": "referer",
+              "value": "https://www.mercadolivre.com.br/afiliados/linkbuilder"
+            },
+            {
+              "name": "user-agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "cookie",
+              "value": "={{ $json.cookies_atualizados }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"urls\": [\n    \"{{ $json.url_final }}\"\n  ],\n  \"tag\": \"adrianowarlen20230427211703\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -80,
+        -720
+      ],
+      "id": "5f4b53fc-fa11-4d3c-8222-3671d87b8132",
+      "name": "7. GERADOR REAL DE LINK"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.body.url_concorrente }}",
+                    "rightValue": "mercadolivre",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    },
+                    "id": "1dee0d90-b1d5-4122-a3b6-c4208e8422ce"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Mercado Livre"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "2d35be9c-165f-4b3e-9471-758217441b8b",
+                    "leftValue": "={{ $json.body.url_concorrente }}",
+                    "rightValue": "meli",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Mercado Livre - Meli"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "2cf0ea19-49b4-4b84-a88a-d6bdc7303162",
+                    "leftValue": "={{ $json.body.url_concorrente }}",
+                    "rightValue": "magalu",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Magalu"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "a96113f7-2b49-4edc-a962-3aa4d3d28fab",
+                    "leftValue": "={{ $json.body.url_concorrente }}",
+                    "rightValue": "magazineluiza",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Magazine"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "a7ed68fb-5ae7-43d3-b83a-451957ed52d9",
+                    "leftValue": "={{ $json.body.url_concorrente }}",
+                    "rightValue": "onelink",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Magazine - OneLink"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "15319092-3793-47a2-bb0e-33fc27ff3df8",
+                    "leftValue": "={{ $json.body.url_concorrente }}",
+                    "rightValue": "shopee",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Shopee"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "663b4616-7d3d-4ac8-8e84-c2931c3798c2",
+                    "leftValue": "={{ $json.body.url_concorrente }}",
+                    "rightValue": "amzn",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Amazon - amzn"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "e3f1aaf3-2a0a-4c89-a9fa-c9649166d11a",
+                    "leftValue": "={{ $json.body.url_concorrente }}",
+                    "rightValue": "amazon",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Amazon"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -1648,
+        -192
+      ],
+      "id": "f8b8fb45-cea9-4a18-a6cf-9d1e5b5c05f1",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "59be3b54-2faa-41db-8764-9ef5f92e8a16",
+              "name": "url_correta",
+              "value": "={{ $json.body.url_concorrente.contains('magazinevoce.com.br') ? 'https://www.magazinevoce.com.br/magazinerevendasudeste/p/' + $json.body.url_concorrente.split('/p/')[1] : $json.body.url_concorrente.contains('/p/') ? 'https://www.magazinevoce.com.br/magazinerevendasudeste/p/' + $json.body.url_concorrente.split('/p/')[1].split('?')[0] : 'https://www.magazinevoce.com.br/magazinerevendasudeste/' }}",
+              "type": "string"
+            },
+            {
+              "id": "6ddc8ff1-c97e-4303-a777-d6c9ad361d8d",
+              "name": "nome",
+              "value": "={{ $json.body.url_concorrente.contains('/p/') ? $json.body.url_concorrente.split('/p/')[0].split('/').pop().replaceAll('-', ' ').toUpperCase() : 'PRODUTO MAGAZINE LUIZA' }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1280,
+        -528
+      ],
+      "id": "1547442c-1c71-46a7-b61e-0ce084154b84",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "name": "url",
+              "value": "={{ $json.body.url_concorrente }}",
+              "type": "string"
+            },
+            {
+              "name": "shopee_app_id",
+              "value": "18332030606",
+              "type": "string"
+            },
+            {
+              "name": "shopee_app_secret",
+              "value": "MJS67QHU7HMCRX5AHI75YI2FO4M2AIXP",
+              "type": "string"
+            },
+            {
+              "name": "timestamp",
+              "value": "={{ $now.toFormat('X') }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1280,
+        -320
+      ],
+      "id": "4eb2d85b-d5b0-4421-9ce3-03a712937a4f",
+      "name": "Variáveis Shopee"
+    },
+    {
+      "parameters": {
+        "jsCode": "const payload = { query: `mutation { generateShortLink(input: { originUrl: \"${$input.first().json.url}\" }) { shortLink } }` }; return { body: payload, rawBody: JSON.stringify(payload), ...$input.first().json };"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -1088,
+        -320
+      ],
+      "id": "daafe925-a3fe-409f-a40e-f96276b1cd70",
+      "name": "Preparar Request Shopee"
+    },
+    {
+      "parameters": {
+        "type": "SHA256",
+        "value": "={{ $json.shopee_app_id + $json.timestamp + $json.rawBody + $json.shopee_app_secret }}",
+        "dataPropertyName": "signature"
+      },
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        -896,
+        -320
+      ],
+      "id": "d6073479-e3a5-4459-96d1-1600e3510aff",
+      "name": "Crypto"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://open-api.affiliate.shopee.com.br/graphql",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json.rawBody }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -704,
+        -320
+      ],
+      "id": "ea06bddb-89c3-4a27-bf7f-254dcc1523b8",
+      "name": "Gerar Link Shopee"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Este código verifica se o objeto existe antes de ler, evitando o erro de \"undefined\"\ntry {\n    const resposta = items[0].json;\n    // Tenta pegar o link de várias formas possíveis para garantir o retorno\n    const shortLink = resposta?.data?.generateShortLink?.shortLink \n                   || resposta?.shortLink \n                   || (resposta?.body && JSON.parse(resposta.body).data?.generateShortLink?.shortLink);\n    \n    return [{ json: { short_url: shortLink || \"ERRO_LINK_NAO_ENCONTRADO\" } }];\n} catch (e) {\n    return [{ json: { short_url: \"ERRO_PROCESSAMENTO\" } }];\n}\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -496,
+        -320
+      ],
+      "id": "6f2a0da1-afb8-44d7-8820-f301e319f3c6",
+      "name": "Retorno Final Shopee"
+    },
+    {
+      "parameters": {
+        "url": "https://www.amazon.com.br/associates/sitestripe/getShortUrl",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "longUrl",
+              "value": "={{ $json.url_final }}"
+            },
+            {
+              "name": "marketplaceId",
+              "value": "526970"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+            },
+            {
+              "name": "Referer",
+              "value": "=https://www.amazon.com.br/"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -896,
+        -112
+      ],
+      "id": "bdabcf4e-bd6e-4d13-ada0-24fa17cb4067",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "jsCode": "const url = $('Switch').item.json.body.url_concorrente;\nconst cleanUrl = url.split(\"?\")[0];\nconst tag = \"radardeof0c9c-20\"; // Sua tag fixa\nconst finalUrl = cleanUrl + \"?tag=\" + tag;\n\n// Retorna o formato exato que o seu App Flutter espera\nreturn { \n    json: { \n        short_url_amzn: finalUrl, // Usamos short_url_amzn para o seu UrlResolver ler\n        title: \"Produto Amazon\",\n        price: \"0,00\"\n    } \n};\n\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1088,
+        -112
+      ],
+      "id": "1232ae82-8232-4e73-a5df-722e37639c52",
+      "name": "monta-url"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ad851e3f-b70f-4adc-8c3f-0ca99c0b194d",
+              "name": "tag-amazon",
+              "value": "radardeof0c9c-20",
+              "type": "string"
+            },
+            {
+              "id": "31e2aa52-e488-43dc-a90a-6c6b7db31172",
+              "name": "cookie-amazon",
+              "value": "session-id=131-9557430-8521654; session-id-time=2082787201l; i18n-prefs=BRL; lc-acbbr=pt_BR; csm-hit=tb:0X23E66XHX6YGRTBPBJZ+s-MEX0EP6K16N8AB37NZAX|1781029481987&t:1781029481987&adb:adblk_no; ubid-acbbr=135-1960153-0740631; session-token=\"MGKKjPsXxfYs9HXUHLjT32EvEaCqHz/Bz0JqMbNu2L20ezbfS4UwZETKWyVINf/MIkbOQPCX6/wi3L2FU0jJFavyxukVbUecx6pLsErHpO5NgnUCGKUU+IeyktoRk9JrLFFhTVV5RHME5aGDjdeqNnmQ02vLR2sl+ZkWWJF/1H+aX0P5Kuokz3IlHfEfAY4tbD+hd0Rn9orMrJV8KBCf6kAJK/DzOFyOZo85qZoWPtObLLZ2Kdn9FbU/uJ7Qks3A/UWTRAtzXBo=\"; rx…8ybtMAlo4snK7aqxfEBcffYXd_DydlYPEnq7uaYiq1xZ9A; sess-at-acbbr=AVZz+lecAaZkGZgRiMMo4D0OZpArR5aXPLbUc5fgLjw=; sst-acbbr=Sst1|PQLAmMy-e8W2kncrVOWS6VflDVdyYxd9VD41kGrkLOZbQgwgP-NUiKDsVZ4g9ThwhV8b3yYMn1Vj1lhyY5lZQGyerdsxaFAOuHE6AkFMNPwwzgdp8wXrwMn5Gggz_8GZUU0oVgNx3yXB-knFZdM4OXgm8YM5FeclSp0sawSMp6vzCalxuB9czqpTXl42NaVuIiET206sNI0X7sGsxklnARJBMgV7AcLNDq-HMFOmO_hl0cSRxS-DlMrQekNJdOs0JGGmDntX_fQag__1saeXkJfZE_UVdNwt7-Oz87A_CEU7tNBcC-0mRkdKRg2BZuEDU6hgcjwV3BSNIWopXl7aqObr0Y0xhB419bRw5jzkFvqmegnjIgsjZcO8up6QG0CCqgDE",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1280,
+        -112
+      ],
+      "id": "8ef3a7da-35d6-4b54-b02a-6cd7e7e34501",
+      "name": "Config Amazon"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. CAMPO DO LINK": {
+      "main": [
+        [
+          {
+            "node": "3. Expandir e Seguir Rota",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3. Expandir e Seguir Rota": {
+      "main": [
+        [
+          {
+            "node": "4. Extrair e Montar URL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "4. Extrair e Montar URL": {
+      "main": [
+        [
+          {
+            "node": "5. NOVO CAMPO DO LINK",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "5. NOVO CAMPO DO LINK": {
+      "main": [
+        [
+          {
+            "node": "6. Validando Sessão",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "6. Validando Sessão": {
+      "main": [
+        [
+          {
+            "node": "7. Renovando Chaves",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "7. Renovando Chaves": {
+      "main": [
+        [
+          {
+            "node": "7. GERADOR REAL DE LINK",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "2. CAMPO DO LINK",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "2. CAMPO DO LINK",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Variáveis Shopee",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Config Amazon",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Config Amazon",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Variáveis Shopee": {
+      "main": [
+        [
+          {
+            "node": "Preparar Request Shopee",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preparar Request Shopee": {
+      "main": [
+        [
+          {
+            "node": "Crypto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto": {
+      "main": [
+        [
+          {
+            "node": "Gerar Link Shopee",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gerar Link Shopee": {
+      "main": [
+        [
+          {
+            "node": "Retorno Final Shopee",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "monta-url": {
+      "main": [
+        []
+      ]
+    },
+    "Config Amazon": {
+      "main": [
+        [
+          {
+            "node": "monta-url",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "07bab346-97cf-48c6-a3f0-cd562e1a3cd3",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1a60758cdc86cf4792900c7f7c9a2165a6eb90a286118113129e1d675aca902e"
+  },
+  "nodeGroups": [],
+  "id": "iyiepUaSXQ1TKGAh",
+  "tags": []
+}
